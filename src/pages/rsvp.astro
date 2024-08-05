@@ -9,14 +9,20 @@ import Testimonials from "@/components/landing/Testimonials.astro";
 import Pricing from "@/components/landing/Pricing.astro";
 import Faq from "@/components/landing/Faq.astro";
 import Cta from "@/components/global/Cta.astro";
+// import { FilloutStandardEmbed } from "@fillout/react";
 
 // Use SSR
 export const prerender = false;
+
+// Stylesheet for Fillout form
+import "@fillout/react/style.css"
 ---
 
 <BaseLayout>
   <Hero />
   <LogoCloud />
+  <div style="width:100%;height:500px;" data-fillout-id="1TYZeceo1Pus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div><script src="https://server.fillout.com/embed/v1/"></script>
+  <!-- <FilloutStandardEmbed filloutId="1TYZeceo1Pus" /> -->
   <Work />
   <Howitworks />
   <AllScope />
