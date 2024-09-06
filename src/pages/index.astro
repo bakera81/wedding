@@ -1,7 +1,107 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import BackgroundImg from '../components/BackgroundImg.astro';
 import Card from '../components/Card.astro';
----
+
+import receptionImg from '../../public/images/wedding/lambs_room.jpg'
+import threeWitchesImg from '../../public/images/wedding/three_witches.jpg'
+import bat1Img from '../../public/images/wedding/bat1.jpg'
+import eye1Img from '../../public/images/wedding/eye1.jpg'
+import hairdresser from '../../public/images/wedding/hairdresser.jpg'
+import nineOrchardImg from '../../public/images/wedding/nine_orchard_4.jpg'
+import superiority1Img from '../../public/images/wedding/superiority1.jpg'
+// TODO: no-index
+---  
+<Layout title={'Wren & Anthony\'s Spooky Wedding'}>
+<div class='columns isReverseMobile'>
+	<div class='column is-two-thirds'>
+	<div class='grid is-col-min-12 is-gap-0'>
+		<div class='cell weddingCell'>
+		<BackgroundImg href='/wedding/itinerary' img={threeWitchesImg}>
+			<a href='/wedding/itinerary' class='weddingLink'>itinerary</a>
+		</BackgroundImg>
+		</div>
+		<div class='cell weddingCell'>
+		<BackgroundImg href='/wedding/9-orchard' img={nineOrchardImg}>
+			<a href='/wedding/9-orchard' class='weddingLink'>Where to stay</a>
+		</BackgroundImg>
+		</div>
+		<div class='cell weddingCell'>
+		<BackgroundImg img={eye1Img}></BackgroundImg>
+		</div>
+		<div class='cell weddingCell'>
+		<BackgroundImg href='/wedding/superiority-burger' img={superiority1Img}>
+			<a href='/wedding/superiority-burger' class='weddingLink'>"cocktail party"</a>
+		</BackgroundImg>
+		</div>
+		<div class='cell weddingCell'>
+		<BackgroundImg href='/wedding/ceremony' img={nineOrchardImg}>
+			<a href='/wedding/ceremony' class='weddingLink'>ceremony</a>
+		</BackgroundImg>
+		</div>
+		<div class='cell weddingCell'>
+		<BackgroundImg href='/wedding/reception' img={nineOrchardImg}>
+			<a href='/wedding/reception' class='weddingLink'>reception</a>
+		</BackgroundImg>
+		</div>
+		<div class='cell weddingCell'>
+		<BackgroundImg href='/wedding/dresscode' img={hairdresser}>
+			<a href='/wedding/dresscode' class='weddingLink'>dress code</a>
+		</BackgroundImg>
+		</div>
+		<div class='cell weddingCell'>
+		<BackgroundImg href='/wedding/faq' img={bat1Img}>
+			<a href='/wedding/faq' class='weddingLink'>FAQs</a>
+		</BackgroundImg>
+		</div>
+	</div>
+	</div>
+	<div class='column'>
+	<div class='section' style={{paddingLeft: 0, paddingRight: 0, paddingBottom: 0}}>
+		<div class='container'>
+		<h1 class='title is-1 is-size-3-tablet is-size-1-mobile weddingTitle'>Wren</h1>
+		<h1 class='title is-2 is-size-3-tablet  is-size-1-mobile weddingTitle'>and</h1>
+		<h1 class='title is-1 is-size-3-tablet  is-size-1-mobile weddingTitle'>Anthony</h1>
+		</div>
+	</div>
+	<div class='section'>
+		<div class='container'>
+		<p style={{textAlign: 'center', fontStyle: 'italic', paddingBottom: 0}}>Halloween</p>
+		<p style={{textAlign: 'center', paddingBottom: 0}}>Thursday, October 31, 2024</p>
+		<p style={{textAlign: 'center', paddingBottom: 0}}>9 Orchard Street, New York, New York</p>
+		</div>
+	</div>
+	</div>
+</div>
+<style>
+	.weddingCell {
+		min-height: 350px;
+	}
+
+	.weddingTitle {
+		font-family: 'Orsay', serif;
+		text-align: center;
+		font-weight: normal;
+		padding-bottom: 2rem;
+	}
+
+	@media (max-width: 768px) {
+		.isReverseMobile {
+			display: flex;
+			flex-direction: column-reverse;
+		}
+	}
+	.weddingLink {
+		font-family: 'Didact Gothic', sans-serif;
+		font-size: 2.5rem;
+		font-style: italic;
+		font-weight: 600;
+		color:black;
+	}
+</style>
+</Layout> 
+  )
+}
 
 <Layout title="Welcome to Astro.">
 	<main>
