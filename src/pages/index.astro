@@ -3,16 +3,17 @@ import Layout from '../layouts/Layout.astro';
 import BackgroundImg from '../components/BackgroundImg.astro';
 import Card from '../components/Card.astro';
 
-import receptionImg from '../../public/images/wedding/lambs_room.jpg'
-import threeWitchesImg from '../../public/images/wedding/three_witches.jpg'
-import bat1Img from '../../public/images/wedding/bat1.jpg'
-import eye1Img from '../../public/images/wedding/eye1.jpg'
-import hairdresser from '../../public/images/wedding/hairdresser.jpg'
-import nineOrchardImg from '../../public/images/wedding/nine_orchard_4.jpg'
-import superiority1Img from '../../public/images/wedding/superiority1.jpg'
+import receptionImg from '../images/wedding/lambs_room.jpg'
+// TODO: how to pass an image to a component. It's not liking this on build.
+import threeWitchesImg from '../images/wedding/three_witches.jpg'
+import bat1Img from '../images/wedding/bat1.jpg'
+import eye1Img from '../images/wedding/eye1.jpg'
+import hairdresser from '../images/wedding/hairdresser.jpg'
+import nineOrchardImg from '../images/wedding/nine_orchard_4.jpg'
+import superiority1Img from '../images/wedding/superiority_1.jpg'
 // TODO: no-index
 ---  
-<Layout title={'Wren & Anthony\'s Spooky Wedding'}>
+<Layout title="Wren & Anthony's Spooky Wedding">
 <div class='columns isReverseMobile'>
 	<div class='column is-two-thirds'>
 	<div class='grid is-col-min-12 is-gap-0'>
@@ -40,7 +41,7 @@ import superiority1Img from '../../public/images/wedding/superiority1.jpg'
 		</BackgroundImg>
 		</div>
 		<div class='cell weddingCell'>
-		<BackgroundImg href='/wedding/reception' img={nineOrchardImg}>
+		<BackgroundImg href='/wedding/reception' img={receptionImg}>
 			<a href='/wedding/reception' class='weddingLink'>reception</a>
 		</BackgroundImg>
 		</div>
