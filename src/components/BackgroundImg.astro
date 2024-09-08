@@ -11,19 +11,19 @@ let imgHeight = height ? height : 450;
     <slot></slot>
   </div>
   {href ? (
-    <a href={href}>
+    <a href={href} class="bgImgContainer">
     <Image 
       alt="Scenes from a spooky wedding"
       src={img}
-      height={imgHeight}
+      // height={imgHeight}
       style={{opacity: .6}}
       />
-  </a>
+    </a>
   ) : (
     <Image 
       src={img}
       alt="Scenes from a spooky wedding"
-      height={imgHeight}
+      // height={imgHeight}
       style={{opacity: .6}}
       />
   )}
@@ -61,11 +61,11 @@ let imgHeight = height ? height : 450;
     width: 100%;
     height: 100%; /* Ensure the container fills its parent 
   } */
-  .bgImgContainer img {
+
+  img {
     object-fit: cover; /* Same as objectFit='cover' */
     width: 100%;
     height: 100%; /* Match the Next.js layout='fill' behavior */
-    opacity: 0.6; /* Match opacity styling */
   }
 
 </style>
