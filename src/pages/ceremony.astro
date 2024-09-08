@@ -1,0 +1,26 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+
+import nineOrchardImg from '../images/wedding/nine_orchard_5.webp'
+---
+
+<Layout title="Ceremony">
+    <div class="section">
+        <div class="container">
+      <h1 class="is-1 title has-text-centered">Ceremony</h1>
+    </div>
+    <div class="section">
+        <div class="container">
+            <p>Join us on the balcony (Room 515) at 9 Orchard at 4:30 on Halloween.</p>
+            <p>Please be prepared to share a memory about either (or both) of us that helps explain why you're excited about our soon-to-be-legal union. It could be a story about Wren or Anthony as a child that not everyone knows, or as recent as something we said or did earlier that day.</p>
+            <p>Caroline will be our legal officiant, but we plan on each parent contributing to the ceremony. We will contact you directly to share more info.</p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container center-items">
+            <Image alt="Nine Orchard Street" src={nineOrchardImg} style=""/>
+        </div>
+    </div>
+  </div>
+</Layout>

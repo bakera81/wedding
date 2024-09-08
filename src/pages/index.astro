@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import BackgroundImg from '../components/BackgroundImg.astro';
-import Card from '../components/Card.astro';
 
 import receptionImg from '../images/wedding/lambs_room.jpg'
 // TODO: how to pass an image to a component. It's not liking this on build.
@@ -9,7 +8,8 @@ import threeWitchesImg from '../images/wedding/three_witches.jpg'
 import bat1Img from '../images/wedding/bat1.jpg'
 import eye1Img from '../images/wedding/eye1.jpg'
 import hairdresser from '../images/wedding/hairdresser.jpg'
-import nineOrchardImg from '../images/wedding/nine_orchard_4.jpg'
+import nineOrchardImg from '../images/wedding/nine_orchard_2.jpg'
+import ceremonyImg from '../images/wedding/nine_orchard_5.webp'
 import superiority1Img from '../images/wedding/superiority_1.jpg'
 // TODO: no-index
 ---  
@@ -36,7 +36,7 @@ import superiority1Img from '../images/wedding/superiority_1.jpg'
 		</BackgroundImg>
 		</div>
 		<div class='cell weddingCell'>
-		<BackgroundImg href='/ceremony' img={nineOrchardImg}>
+		<BackgroundImg href='/ceremony' img={ceremonyImg}>
 			<a href='/ceremony' class='weddingLink'>ceremony</a>
 		</BackgroundImg>
 		</div>
