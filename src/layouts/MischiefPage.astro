@@ -19,11 +19,11 @@ const { footer } = Astro.props;
             <p>Fun fact: <a target="_blank" href='https://www.nytimes.com/2024/03/14/style/superiority-burger-ashwin-deshmukh.html'>Wren's old boss is a high-profile con artist</a> who is a managing partner at Superiorty Burger!</p>
         </div>
     </div>
+    <slot></slot>
     <div class="section">
         <div class="container center-items">
             <Image alt="Superiority Burger Guy" src={burgerImg} />
         </div>
     </div>
   </div>
-  <slot></slot>
 </Layout>
