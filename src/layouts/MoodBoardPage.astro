@@ -1,0 +1,18 @@
+---
+import Layout from "./Layout.astro";
+import MoodBoard from '../components/MoodBoard.astro'
+
+interface Props {
+  footer: string;
+  title: string;
+}
+
+const { footer, title }  = Astro.props;
+---
+
+<Layout footer={footer} title={title}>
+  <MoodBoard />
+    {footer !=== '/nance' && footer !=== '/mischief' ? (
+      <MoodBoard />
+    ) : (<></>)}
+</Layout

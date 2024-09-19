@@ -54,6 +54,12 @@ const { title, footer } = Astro.props;
 		font-size: 1.2rem;
 		max-width: 70%;
 	}
+	
+	@media (max-width: 768px) {
+		p, li {
+			max-width: inherit; /* Or any other value for larger screens */
+		}
+	}
 
 	p, ul, ol {
 		padding-bottom: 1em;
