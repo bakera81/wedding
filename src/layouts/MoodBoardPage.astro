@@ -1,18 +1,16 @@
 ---
 import Layout from "./Layout.astro";
-import MoodBoard from '../components/MoodBoard.astro'
+import CeremonyDressCode from '../components/CeremonyDressCode.astro'
+import MischiefDressCode from '../components/MischiefDressCode.astro'
 
 interface Props {
   footer: string;
-  title: string;
 }
 
-const { footer, title }  = Astro.props;
+const { footer }  = Astro.props;
 ---
 
-<Layout footer={footer} title={title}>
-  <MoodBoard />
-    {footer !=== '/nance' && footer !=== '/mischief' ? (
-      <MoodBoard />
-    ) : (<></>)}
+<Layout footer={footer} title="Dress Code">
+  <MischiefDressCode footer={footer}/>
+  {footer === '/mischief' ? (<></>) : (<CeremonyDressCode />)}
 </Layout

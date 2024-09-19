@@ -6,8 +6,10 @@ interface Props {
 const { footer } = Astro.props;
 ---
 <footer class="footer">
+  <div class="section">
     <div class="container" style={{textAlign: 'right', fontFamily: "'Big Bird', serif"}}>
         <a href={footer ? footer : '/'}>return to homepage</a>
+      </div>
     </div>
   </footer>
   <style>

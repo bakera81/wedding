@@ -1,12 +1,13 @@
 ---
 import MischiefPage from "../../layouts/MischiefPage.astro"
+// enableMischief is the version of the page for folks who are only attending mischief night.
 ---
 
-<MischiefPage footer={null}>
-    <div class="section">
-        <div class="container">
+<MischiefPage footer={null}, enableMischief="true">
+     {/*<div class="section">
+        <div class="container"> */}
             <p>We are having a small ceremony with family on Halloween, but wanted to make sure we still celebrated with friends the night before! (We will also have a casual house party/celebration next summer).</p>
-            <p style={{fontFamily: "'Big Bird', serif"}}><a href="/mischief/photos">&rarr; cute photos! &larr;</a></p>
-        </div>
-    </div>
+            <p style={{fontFamily: "'Big Bird', serif"}}><a href="/mischief/photos">&rarr; Click here for cute photos! &larr;</a></p>
+        {/*</div>
+    </div> */}
 </MischiefPage>
