@@ -1,11 +1,11 @@
 ---
 import BackgroundImg from "../components/BackgroundImg.astro";
 
-const { imgData } = Astro.props;
+const { imgData, scrollable } = Astro.props;
 ---
 
 <div class="columns isReverseMobile no-bottom-pad">
-    <div class="column is-two-thirds no-bottom-pad">
+    <div class={`column is-two-thirds no-bottom-pad ${scrollable ? 'scrollable' : ''}`}>
       <div class="grid is-col-min-12 is-gap-0">
         {imgData.map(cell => (
           <div class="cell weddingCell">
@@ -91,4 +91,11 @@ const { imgData } = Astro.props;
 		padding-bottom: 1rem;
     max-width: 100%;
 	}
+  @media (min-width: 769px) {
+    .scrollable {
+      overflow: scroll;
+      max-height: 100vh;
+    }
+
+  }
   </style>
