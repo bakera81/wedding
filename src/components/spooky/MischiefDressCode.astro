@@ -1,0 +1,93 @@
+---
+import MoodBoard from "./MoodBoard.astro"
+
+// import img1 from "../../images/spooky/dresscode/mischief/0a699773ea6def032c298623fe888983.jpg";
+// import img2 from "../../images/spooky/dresscode/mischief/17ac1bfa414310ef0269e987a6933a1b.jpg";
+import img3 from "../../images/spooky/dresscode/mischief/218643ebd5784820863ec3ab2e750d28.jpg";
+import img4 from "../../images/spooky/dresscode/mischief/2651122a942031fa43d70b1c463deea6.jpg";
+import img5 from "../../images/spooky/dresscode/mischief/3563a4c3d81a91ae473235118eb4a6e0.jpg";
+import img6 from "../../images/spooky/dresscode/mischief/39896cda852b602dadb33c8fbd2af1cf.jpg";
+import img7 from "../../images/spooky/dresscode/mischief/40a0b131ba40fd5e6b0694cfe4dafdb8.jpg";
+import img8 from "../../images/spooky/dresscode/mischief/464f5bffbe56d95e9de5ac064f81a4ec.jpg";
+import img8_2 from "../../images/spooky/dresscode/mischief/489857ec514500ae18cf253581856d78.jpg";
+import img9 from "../../images/spooky/dresscode/mischief/4cfefdb62c1a5b4219019538595880c6.jpg";
+import img10 from "../../images/spooky/dresscode/mischief/76149aa533707ff83eb9daa9f602e048.jpg";
+import img11 from "../../images/spooky/dresscode/mischief/7d2abc231b8fa0d6a396b68ed9c65932.jpg";
+import img12 from "../../images/spooky/dresscode/mischief/7d9dc939b337890f06b398cb9cc4a470.jpg";
+import img13 from "../../images/spooky/dresscode/mischief/7e286a44e494c1804c55fded988fb90f.jpg";
+import img14 from "../../images/spooky/dresscode/mischief/8040fbacd2c217befb89316ad4dee888.jpg";
+import img15 from "../../images/spooky/dresscode/mischief/8325d9ad6b187b3f2a822df499f257b2.jpg";
+import img16 from "../../images/spooky/dresscode/mischief/9a5a117f5905c9e242a49236ab3659c5.jpg";
+import img17 from "../../images/spooky/dresscode/mischief/9afaccb3ee4871b697c231a4728e7062.jpg";
+import img19 from "../../images/spooky/dresscode/mischief/af22c67ebe4195b7087796594456bddf.jpg";
+import img20 from "../../images/spooky/dresscode/mischief/c1f0aa88eb807022ecdc565271b20dbe.jpg";
+import img21 from "../../images/spooky/dresscode/mischief/d00657641ab282bafd10a2355c86fef9.jpg";
+import img22 from "../../images/spooky/dresscode/mischief/d604b03a76b33acf26d183c00995d49d.jpg";
+import img23 from "../../images/spooky/dresscode/mischief/dbb15b85fa0e872a77639e440809f06a.jpg";
+import img24 from "../../images/spooky/dresscode/mischief/e52e39ea66e77f4052df3eb2a8704879.jpg";
+import img25 from "../../images/spooky/dresscode/mischief/ebb17a26e1ed83b59fd39c4b8378b5a8.jpg";
+import img26 from "../../images/spooky/dresscode/mischief/f5d174518836306f87498a606e028426.jpg";
+import img27 from "../../images/spooky/dresscode/mischief/ff4262f6fc62bad5dca518d1bc037200.jpg";
+import img28 from "../../images/spooky/dresscode/mischief/ffbd202f4b630941ae4452bebe2b1da8.jpg";
+import img29 from "../../images/spooky/dresscode/mischief/IMG_0992.jpeg";
+import img30 from "../../images/spooky/dresscode/mischief/IMG_2551.jpeg"
+import img31 from "../../images/spooky/dresscode/mischief/IMG_5374.jpeg"
+
+const imgData = [
+    // { img: img1 },
+    // { img: img2 },
+    { img: img3 },
+    { img: img4 },
+    { img: img5 },
+    { img: img6 },
+    { img: img7 },
+    { img: img8 },
+    { img: img8_2 },
+    { img: img9 },
+    { img: img10 },
+    { img: img11 },
+    { img: img12 },
+    { img: img13 },
+    { img: img14 },
+    { img: img15 },
+    { img: img16 },
+    { img: img17 },
+    { img: img19 },
+    { img: img20 },
+    { img: img21 },
+    { img: img22 },
+    { img: img23 },
+    { img: img24 },
+    { img: img25 },
+    { img: img26 },
+    { img: img27 },
+    { img: img28 },
+    { img: img29 },
+    { img: img30 },
+    { img: img31 }
+];
+
+interface Props {
+    footer: string;
+}
+
+const { footer } = Astro.props;
+
+// This component is only meant to be used inside of a MoodBoardPage component
+---
+
+<div class="section">
+    <div class="container">
+        <h1 id="mischief-dress-code" class="is-3 title has-text-centered">Mischief Night Dress Code</h1>
+    </div>
+</div>
+<div class="section">
+    <div class="container">
+        <p>This is not a dress code, it's a state of mind. An inspiration. Jimi Hendrix' Star Spangled Banner. Pagan rituals. Janis Joplin. Pointy hats. All Hallows Eve-Eve. Crystal ball. Disco witch.</p>
+        <p>Bell bottoms. Sparkles. Scarves. It's Halloween.</p>
+        {footer === '/mischief' ? (<></>) : (
+            <p><a href="#wedding-dress-code"> Jump to wedding day dress code</a></p>
+        )}
+    </div>
+</div>
+<MoodBoard imgData={imgData} />

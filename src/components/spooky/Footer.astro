@@ -1,0 +1,32 @@
+---
+interface Props {
+  footer: string;
+}
+
+const { footer } = Astro.props;
+---
+<footer class="footer">
+  <div class="section">
+    <div class="container" style={{textAlign: 'right', fontFamily: "'Big Bird', serif"}}>
+      <a href={footer ? footer : '/spooky/'}>return to homepage</a>
+      <div style="font-size: .8rem">Made with &hearts; (from scratch) by Anthony & Wren</div>
+      </div>
+    </div>
+  </footer>
+  <style>
+    /* Additional styles for footer responsiveness */
+    .footer {
+      /* background-color: #f5f5f5; Light grey background */
+      padding: 2rem 1rem; /* Padding around footer */
+    }
+    .footer-links {
+      justify-content: space-between; /* Spacing between links */
+    }
+  
+    @media (max-width: 768px) {
+      .footer-links {
+        flex-direction: column; /* Stack links on smaller screens */
+        align-items: center;
+      }
+    }
+  </style>

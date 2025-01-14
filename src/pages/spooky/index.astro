@@ -1,0 +1,79 @@
+---
+import Layout from "../../layouts/spooky/Layout.astro";
+import IndexLayout from "../../layouts/spooky/IndexLayout.astro";
+
+import receptionImg from "../../images/spooky/wedding/lambs_room.jpg";
+import threeWitchesImg from "../../images/spooky/wedding/three_witches.jpg";
+import bat1Img from "../../images/spooky/wedding/bat1.jpg";
+import eye1Img from "../../images/spooky/wedding/eye1.jpg";
+import hairdresser from "../../images/spooky/wedding/hairdresser.jpg";
+import nineOrchardImg from "../../images/spooky/wedding/nine_orchard_1.jpg";
+// import ceremonyImg from "../../images/spooky/wedding/witch_ritual_2.jpg"
+import ceremonyImg from "../../images/spooky/wedding/nine_orchard_5.webp";
+import superiority1Img from "../../images/spooky/wedding/superiority_1.jpg";
+import photosImg from "../../images/spooky/photos/IMG_5324.jpg";
+import placesImg from "../../images/spooky/wedding/spider.jpg"
+import playlistImg from "../../images/spooky/wedding/witches_on_water.jpg"
+
+const imgData = [
+  {
+    name: "Itinerary",
+    href: "/spooky/itinerary",
+    img: threeWitchesImg
+  },
+  {
+    name: "Hotel stuff",
+    href: "/spooky/9-orchard",
+    img: nineOrchardImg
+  },
+  // {
+  //   name: "Eye Image",
+  //   img: eye1Img
+  // },
+  {
+    name: "Mischief night",
+    href: "/spooky/superiority-burger",
+    img: superiority1Img
+  },
+  {
+    name: "Ceremony",
+    href: "/spooky/ceremony",
+    img: ceremonyImg
+  },
+  {
+    name: "Reception",
+    href: "/spooky/reception",
+    img: receptionImg
+  },
+  {
+    name: "Dress Code",
+    href: "/spooky/dresscode",
+    img: hairdresser
+  },
+  {
+    name: "FAQs",
+    href: "/spooky/faq",
+    img: bat1Img
+  },
+  {
+    name: "Favorite Places",
+    href: "/spooky/favorite-places",
+    img: placesImg
+  },
+  {
+    name: "Photos",
+    href: "/spooky/photos",
+    img: photosImg
+  },
+  {
+    name: "Playlist",
+    href: "/spooky/playlist",
+    img: playlistImg
+  }
+];
+---
+
+<Layout title="Wren & Anthony's Spooky Wedding">
+  <IndexLayout imgData={imgData} />
+</Layout>
+
