@@ -199,7 +199,7 @@ const { title, footer } = Astro.props;
 
 
 	p, li {
-		font-family: 'Baskerville', 'Libre Baskerville', serif;
+		font-family: 'FreightBig Pro', 'Baskerville', 'Libre Baskerville', serif;
 		font-size: 1.2rem;
 		max-width: 70%;
 	}
@@ -212,7 +212,7 @@ const { title, footer } = Astro.props;
 
 	p, ul, ol {
 		padding-bottom: 1em;
-		color: darkgray;
+		color: white;
 
 	}
 
@@ -222,6 +222,13 @@ const { title, footer } = Astro.props;
 	}
 	h1, h2, h3 {
 		font-weight: 500;
+	}
+	a {
+		text-decoration: underline;
+		color: white;
+	}
+	a:hover {
+		font-style: italic;
 	}
 	.center-items {
 		display: flex;
@@ -236,14 +243,5 @@ const { title, footer } = Astro.props;
 	.no-pad {
 		padding: 0;
 	}
-	.chuby {
-      font-family: "Chuby", serif;
-    }
-	.fleuron {
-      font-family: "Fleuron", serif;
-    }
-	.fleuronReg {
-      font-family: "Fleuron Regular", serif;
-    }
 </style>
 </html>
