@@ -10,7 +10,7 @@ const { imgData, scrollable } = Astro.props;
 ---
 
 <div class="columns isReverseMobile no-bottom-pad">
-    <div class={`column is-two-thirds pb-0 pr-0 ${scrollable ? 'scrollable' : ''}`}>
+    <div class={`column is-two-thirds-desktop  pb-0 pr-0 ${scrollable ? 'scrollable' : ''}`}>
       <div class="grid is-col-min-12 is-gap-0">
         {imgData.map(cell => (
           <div class="cell weddingCell">
