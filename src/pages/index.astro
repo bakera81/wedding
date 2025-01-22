@@ -2,10 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import IndexLayout from "../layouts/IndexLayout.astro";
 
-import receptionImg from "../images/wedding/lambs_room.jpg";
-import threeWitchesImg from "../images/wedding/three_witches.jpg";
+import sundanceImg from "../images/home/sundance.jpeg";
+import bloodRitualImg from "../images/home/bloodritual.jpg";
+import pizzaHutImg from "../images/home/pizzahut.jpeg";
 import bat1Img from "../images/wedding/bat1.jpg";
-import eye1Img from "../images/wedding/eye1.jpg";
 import hairdresser from "../images/wedding/hairdresser.jpg";
 import nineOrchardImg from "../images/wedding/nine_orchard_1.jpg";
 // import ceremonyImg from "../images/wedding/witch_ritual_2.jpg"
@@ -17,38 +17,23 @@ import playlistImg from "../images/wedding/witches_on_water.jpg"
 
 const imgData = [
   {
-    name: "Itinerary",
-    href: "/itinerary",
-    img: threeWitchesImg
+    name: "Your Trip",
+    href: "/your-trip",
+    img: sundanceImg
   },
   {
-    name: "Hotel stuff",
-    href: "/9-orchard",
-    img: nineOrchardImg
-  },
-  // {
-  //   name: "Eye Image",
-  //   img: eye1Img
-  // },
-  {
-    name: "Mischief night",
-    href: "/superiority-burger",
-    img: superiority1Img
+    name: "Playlist",
+    href: "/playlist",
+    img: pizzaHutImg
   },
   {
-    name: "Ceremony",
-    href: "/ceremony",
-    img: ceremonyImg
-  },
-  {
-    name: "Reception",
-    href: "/reception",
-    img: receptionImg
-  },
-  {
-    name: "Dress Code",
-    href: "/dresscode",
+    // name: "placeholder",
     img: hairdresser
+  },
+  {
+    name: "Dresscode",
+    href: "/dresscode",
+    img: placesImg
   },
   {
     name: "FAQs",
@@ -56,24 +41,14 @@ const imgData = [
     img: bat1Img
   },
   {
-    name: "Favorite Places",
-    href: "/favorite-places",
-    img: placesImg
-  },
-  {
-    name: "Photos",
-    href: "/photos",
-    img: photosImg
-  },
-  {
-    name: "Playlist",
-    href: "/playlist",
-    img: playlistImg
+    name: "Wedding Pics",
+    href: "https://kellytaub.pixieset.com/wrenandanthony/",
+    img: bloodRitualImg
   }
 ];
 ---
 
-<Layout title="Wren & Anthony's Spooky Wedding">
+<Layout title="Wren & Anthony's Solstice Celebration">
   <IndexLayout imgData={imgData} />
 </Layout>
 

@@ -1,11 +1,16 @@
 ---
 import BackgroundImg from "../components/BackgroundImg.astro";
+import { Image } from "astro:assets";
+
+import pizzaHutImg from "../images/doodles/pizza-hut-roof.png"
+import sun1Img from "../images/doodles/sun-1.png"
+import sun2Img from "../images/doodles/sun-2.png"
 
 const { imgData, scrollable } = Astro.props;
 ---
 
 <div class="columns isReverseMobile no-bottom-pad">
-    <div class={`column is-two-thirds no-bottom-pad ${scrollable ? 'scrollable' : ''}`}>
+    <div class={`column is-two-thirds pb-0 pr-0 ${scrollable ? 'scrollable' : ''}`}>
       <div class="grid is-col-min-12 is-gap-0">
         {imgData.map(cell => (
           <div class="cell weddingCell">
@@ -21,52 +26,132 @@ const { imgData, scrollable } = Astro.props;
       </div>
     </div>
     <div class="column">
-      <div
-        class="section"
-        style={{ paddingLeft: 0, paddingRight: 0, paddingBottom: 0 }}
-      >
-        <div class="container">
-          <h1 class="title index-title weddingTitle">
-            Wren
-          </h1>
-          <h1 class="title is-2 weddingTitle">
-            +
-          </h1>
-          <h1 class="title index-title weddingTitle">
-            Anthony
-          </h1>
+
+      <div class="section pb-0 pl-3 pr-3">
+        <h1 class="title index-title weddingTitle">CELEBRATE</h1>
+        <h1 class="title index-title weddingTitle">WREN</h1>
+        <h1 class="title index-title weddingTitle" style={{textAlign: 'right'}}>AND</h1>
+        <h1 class="title index-title weddingTitle">ANTHONY'S</h1>
+        <h1 class="title index-title weddingTitle">MARRIAGE</h1>
+      </div>
+   
+
+      {/*
+      <div class="section pb-0 pl-3 pr-3">
+        <h1 class="title index-title weddingTitle">CELEBRATE</h1>
+        <h1 class="title index-title weddingTitle">WREN</h1>
+      </div>
+      <div class="section pb-0 pt-3 pl-3 pr-3" style={{textAlign: 'right'}}>
+        <h1 class="title index-title weddingTitle">AND</h1>
+      </div>
+      <div class="section pb-0 pt-3 pl-3 pr-3">
+        <h1 class="title index-title weddingTitle">ANTHONY'S</h1>
+        <h1 class="title index-title weddingTitle">MARRIAGE</h1>
+      </div>
+      <!-- <div class="section pb-0">
+        <Image src={pizzaHutImg} alt="The iconinc Pizza Hut roofline"/>
+      </div> -->
+      <div class="section pb-0 pt-3">
+        <div class="columns">
+          <div class="column is-four-fifths indexCol" style={{textAlign: 'left'}}>
+            <h1 class="title index-title weddingTitle">CELEBRATE</h1>
+            <h1 class="title index-title weddingTitle">WREN</h1>
+          </div>
+          <div class="column indexCol" style={{textAlign: 'right'}}>
+            <Image src={sun2Img} alt="The Solstice Sun" />
+          </div>
         </div>
       </div>
-      <div class="section">
+      <div class="section pb-0 pt-3">
+        <div class="columns">
+          <div class="column indexCol" style={{textAlign: 'left'}}>
+            <Image src={sun2Img} alt="The Solstice Sun" />
+          </div>
+          <div class="column is-four-fifths indexCol" style={{textAlign: 'right'}}>
+            <h1 class="title index-title weddingTitle">AND</h1>
+          </div>
+        </div>
+      </div>
+      <div class="section pb-0 pt-3">
+        <div class="columns">
+          <div class="column is-four-fifths indexCol" style={{textAlign: 'left'}}>
+            <h1 class="title index-title weddingTitle">ANTHONY'S</h1>
+            <h1 class="title index-title weddingTitle">MARRIAGE</h1>
+          </div>
+          <div class="column indexCol" style={{textAlign: 'right'}}>
+            <Image src={sun2Img} alt="The Solstice Sun" />
+          </div>
+        </div>
+      </div>
+      <div class="section pb-0 pt-6">
+        <div class="columns is-gapless has-text-centered">
+          <div class="column indexCol" style={{textAlign: 'left'}}>
+            <h1 class="title is-1 tallerFont weddingTitle">06</h1>
+          </div>
+          <div class="column indexCol" style={{textAlign: 'center'}}>
+            <h1 class="title is-1 tallerFont weddingTitle">21</h1>
+          </div>
+          <div class="column indexCol" style={{textAlign: 'right'}}>
+            <h1 class="title is-1 tallerFont weddingTitle">2025</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="section pb-0 pt-3">
+        <div class="columns">
+          <div class="column is-four-fifths indexCol" style={{textAlign: 'left'}}>
+            <h1 class="title index-title weddingTitle" style={{fontFamily:'Orsay'}}>Orsay</h1>
+            <h1 class="title index-title weddingTitle" style={{fontFamily:'Big Bird'}}>Big Bird</h1>
+            <h1 class="title index-title weddingTitle" style={{fontFamily:'Chuby'}}>Chuby</h1>
+            <h1 class="title index-title weddingTitle" style={{fontFamily:'Hot Pizza'}}>Hot Pizza</h1>
+            <h1 class="title index-title weddingTitle" style={{fontFamily:'Ketchup'}}>Ketchup Manis</h1>
+          </div>
+        </div>
+      </div>
+       */}
+
+      <div class="section pt-5">
         <div class="container">
-		      <p class="big-bird" 
-            style={{
-              textAlign: "center",
-              fontStyle: "italic",
-            }}
-          >On Halloween</p>
-          <p class="big-bird" style={{ textAlign: "center"}}>
-            Thursday, October 31, 2024
-          </p>
-          <p class="big-bird" style={{ textAlign: "center" }}>
-            9 Orchard Street, New York, New York
-          </p>
+		      <p class="details">day after summer solstice</p>
+          <p class="details">saturday, june 21st</p>
+          <p class="details">the pizza hut (our house)</p>
+          <p class="details">19 arnold drive</p>
+          <p class="details">woodstock, new york</p>
+          <p class="details">festivities begin at noon. come whenever.</p>
         </div>
       </div>
     </div>
   </div>
   <style>
-    .big-bird {
-      font-family: "Big Bird", serif;
+    .tallerFont {
+      display: inline-block; /* Required for transform to work properly */
+      transform: scaleY(2.3); /* Stretch vertically */
+    }
+    .indexSection {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .indexCol {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .details {
+      text-align: right;
+      /* font-style: italic; */
+      font-family: 'FreightBig Pro', serif;
+      padding-bottom: 0px;
+      color: white;
+      /* line-height: ; */
     }
     .weddingCell {
       min-height: 350px;
       max-height: 350px;
     }
     .weddingTitle {
-      font-family: "Big Bird", serif;
-      text-align: center;
-      font-weight: normal;
+      font-family: "Big Bird", sans-serif;
+      /* text-align: center; */
+      /* font-weight: 'Light'; */
+      color: white;
       /* padding-bottom: .1rem; */
       margin-bottom: 10px;
     }

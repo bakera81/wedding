@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Image from "astro/components/Image.astro";
+
+import nineOrchardImg from '../images/wedding/nine_orchard_4.jpg'
+---
+
+<Layout footer="/" title="Where to stay">
+    <div class="section">
+        <div class="container">
+            <h1 class="is-0 title has-text-centered">Where to stay</h1>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <p>The closest options: </p>
+            <ul>
+                <li><a href="https://thehoteldylan.com/" target="_blank">Hotel Dylan</a>  </li>
+                <li><a href="https://www.woodstock-inn-ny.com/" target="_blank">The Woodstock Inn</a> </li>
+                <li><a href="https://www.twingableswoodstockny.com/" target="_blank"> Twin Gables</a> </li>
+                <li><a href="https://via.eviivo.com/en-en/Google/mrnngglrybnbwdstckny12498", target="_blank">The Morning Glory BnB</a> </li>
+                <li><a href="https://villagegreenbb.com/" target="_blank">The Village Green BnB</a> </li>
+                <li><a href="https://www.theherwoodinn.com/" target="_blank">The Herwood Inn</a></li>
+            </ul>
+            <p>The fanciest options: </p> 
+            <ul>
+                <li><a href="https://www.woodstockway.com/" target="_blank">Woodstock Way</a></li> 
+                <li><a href="https://hotelkinsley.com/" target="_blank">Hotel Kinsley</a></li>
+            </ul>
+            <p>The cheapest options: </p>
+            <ul>
+                <li><a href="https://www.wyndhamhotels.com/super-8/kingston-new-york/super-8-kingston-ny/rooms-rates?brand_id=SE&checkInDate=6/21/2025&checkOutDate=6/22/2025&useWRPoints=false&children=0&iata=00093752&adults=2&rooms=1&cid=ME:b36nbbqck97bsff:03707&loc=ChIJJ4HJLQEP3YkRE8kyWFqJ10E&sessionId=1736967421&hotel_id=03707" target="_blank">Super 8</a> </li>
+                <li><a href="https://www.bestwestern.com/en_US/book/hotels-in-kingston/best-western-plus-kingston-hotel-and-conference-center/propertyCode.33159.html" target="_blank">Best Western</a></li>
+                <li><a href="https://www.ihg.com/holidayinnexpress/hotels/us/en/find-hotels/select-roomrate?qDest=1835%20Ulster%20Avenue,%20Lake%20Katrine,%20NY,%20US&qPt=CASH&qCiD=21&qCoD=22&qCiMy=052025&qCoMy=052025&qAdlt=2&qChld=0&qRms=1&qIta=99618783&qRtP=IDAFS&qSlH=POUKN&srb_u=1&qSrt=sBR&qBrs=6c.hi.ex.sb.ul.ic.cp.cw.in.vn.cv.rs.ki.kd.ma.sp.va.sp.re.vx.nd.sx.we.lx.rn.sn.sn.sn.sn.sn.nu&qWch=0&qSmP=0&qRad=30&qRdU=mi&setPMCookies=false&qpMbw=0&qErm=false&qpMn=0&qRmFltr=" target="_blank">Holiday Inn</a></li>
+                <li><a href="https://www.hilton.com/en/book/reservation/flexibledates/?ctyhocn=POUKGHX&arrivalDate=2025-06-21&departureDate=2025-06-22&room1NumAdults=2" target="_blank">Hampton Inn</a></li>
+                <li><a href="https://www.marriott.com/en-us/hotels/poucy-courtyard-kingston/overview/" target="_blank">Courtyard</a></li>
+                <li><a href="https://www.marriott.com/en-us/hotels/pourk-residence-inn-kingston/overview/" target="_blank">Residence Inn</a></li>
+            </ul>
+
+            <p>And of course, <a href="https://www.airbnb.com/s/Woodstock--New-York--United-States/homes?refinement_paths%5B%5D=%2Fhomes&flexible_trip_lengths%5B%5D=one_week&monthly_start_date=2025-02-01&monthly_length=3&monthly_end_date=2025-05-01&price_filter_input_type=0&channel=EXPLORE&query=Woodstock%2C%20NY&place_id=ChIJ22XMIO0A3YkRXea2o5nAJf4&location_bb=QihyTsKUFRpCJ%2FG8wpSLEA%3D%3D&date_picker_type=calendar&flexible_date_search_filter_type=0&checkin=2025-06-21&checkout=2025-06-22&source=structured_search_input_header&search_type=autocomplete_click" target="_blank">Airbnb's</a> are a good option. <a href="https://www.airbnb.com/users/show/223318899" target="_blank">Stay with our friend Lumman!</a></p>
+            <p>For things to do, check out our <a href='/favorite-places'>nearby favorite places.</a></p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container center-items">
+            <Image alt="Nine Orchard Street" src={nineOrchardImg} style=""/>
+        </div>
+    </div>
+</Layout>
