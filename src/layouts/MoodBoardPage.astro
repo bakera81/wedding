@@ -1,28 +1,28 @@
 ---
 import Layout from "./Layout.astro";
-import CeremonyDressCode from '../components/CeremonyDressCode.astro'
-import MischiefDressCode from '../components/MischiefDressCode.astro'
+import MoodBoard from "../components/MoodBoard.astro";
 
 interface Props {
   footer: string;
+  title: string;
+  imgData: Array;
 }
 
-const { footer }  = Astro.props;
+
+
+const { footer, title, imgData }  = Astro.props;
 ---
 
-<Layout footer={footer} title="Dress Code">
+<Layout footer={footer} title="Dresscode">
   <div class="section">
     <div class="container">
-      <h1 class="is-0 title has-text-centered">Dress Code</h1>
+      <h1 class="is-0 title has-text-centered">{title}</h1>
     </div>
   </div>
-  {footer === '/mischief' ? (<></>) :(
-    <div class="section">
-      <div class="container">
-        <p style="text-align: center; max-width: 100%"><a href="#mischief-dress-code">Mischief night</a> | <a href="#wedding-dress-code">Wedding Day</a></p>
-      </div>
-  </div>
-  )}
-  <MischiefDressCode footer={footer}/>
-  {footer === '/mischief' ? (<></>) : (<CeremonyDressCode />)}
+  <div class="section">
+    <div class="container">
+      <slot></slot>
+    </div>
+</div>
+<MoodBoard imgData={imgData} />
 </Layout
