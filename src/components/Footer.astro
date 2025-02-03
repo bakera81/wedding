@@ -9,7 +9,8 @@ const { footer } = Astro.props;
   <div class="section">
     <div class="container" style={{textAlign: 'right', fontFamily: "'Big Bird', serif"}}>
       <a href={footer ? footer : '/'}>return to homepage</a>
-      <div style="font-size: .8rem">Made with &hearts; (from scratch) by Anthony & Wren</div>
+      <div 
+        style={{fontSize: '.8rem', color: '#dc4f34'}}>Made with &hearts; (from scratch) by Anthony & Wren</div>
       </div>
     </div>
   </footer>
@@ -17,11 +18,8 @@ const { footer } = Astro.props;
     /* Additional styles for footer responsiveness */
     .footer {
       background-color: #3d352b; 
-      color:  #c1b09a;
+      color:  #dc4f34;
       padding: 2rem 1rem; /* Padding around footer */
-    }
-    .footer a {
-      color: #c1b09a;
     }
     .footer-links {
       justify-content: space-between; /* Spacing between links */
