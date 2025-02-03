@@ -1,37 +1,22 @@
 ---
 import MoodBoardPage from '../layouts/MoodBoardPage.astro'
-import Layout from "./Layout.astro";
-import MoodBoard from "../components/MoodBoard.astro";
 
-import img3 from "../images/dresscode/mischief/218643ebd5784820863ec3ab2e750d28.jpg";
-import img4 from "../images/dresscode/mischief/2651122a942031fa43d70b1c463deea6.jpg";
-import img5 from "../images/dresscode/mischief/3563a4c3d81a91ae473235118eb4a6e0.jpg";
-import img6 from "../images/dresscode/mischief/39896cda852b602dadb33c8fbd2af1cf.jpg";
-import img7 from "../images/dresscode/mischief/40a0b131ba40fd5e6b0694cfe4dafdb8.jpg";
-import img8 from "../images/dresscode/mischief/464f5bffbe56d95e9de5ac064f81a4ec.jpg";
-import img8_2 from "../images/dresscode/mischief/489857ec514500ae18cf253581856d78.jpg";
-import img9 from "../images/dresscode/mischief/4cfefdb62c1a5b4219019538595880c6.jpg";
-import img10 from "../images/dresscode/mischief/76149aa533707ff83eb9daa9f602e048.jpg";
-import img11 from "../images/dresscode/mischief/7d2abc231b8fa0d6a396b68ed9c65932.jpg";
-import img12 from "../images/dresscode/mischief/7d9dc939b337890f06b398cb9cc4a470.jpg";
-import img13 from "../images/dresscode/mischief/7e286a44e494c1804c55fded988fb90f.jpg";
-import img14 from "../images/dresscode/mischief/8040fbacd2c217befb89316ad4dee888.jpg";
-import img15 from "../images/dresscode/mischief/8325d9ad6b187b3f2a822df499f257b2.jpg";
-import img16 from "../images/dresscode/mischief/9a5a117f5905c9e242a49236ab3659c5.jpg";
-import img17 from "../images/dresscode/mischief/9afaccb3ee4871b697c231a4728e7062.jpg";
-import img19 from "../images/dresscode/mischief/af22c67ebe4195b7087796594456bddf.jpg";
-import img20 from "../images/dresscode/mischief/c1f0aa88eb807022ecdc565271b20dbe.jpg";
-import img21 from "../images/dresscode/mischief/d00657641ab282bafd10a2355c86fef9.jpg";
-import img22 from "../images/dresscode/mischief/d604b03a76b33acf26d183c00995d49d.jpg";
-import img23 from "../images/dresscode/mischief/dbb15b85fa0e872a77639e440809f06a.jpg";
-import img24 from "../images/dresscode/mischief/e52e39ea66e77f4052df3eb2a8704879.jpg";
-import img25 from "../images/dresscode/mischief/ebb17a26e1ed83b59fd39c4b8378b5a8.jpg";
-import img26 from "../images/dresscode/mischief/f5d174518836306f87498a606e028426.jpg";
-import img27 from "../images/dresscode/mischief/ff4262f6fc62bad5dca518d1bc037200.jpg";
-import img28 from "../images/dresscode/mischief/ffbd202f4b630941ae4452bebe2b1da8.jpg";
-import img29 from "../images/dresscode/mischief/IMG_0992.jpeg";
-import img30 from "../images/dresscode/mischief/IMG_2551.jpeg"
-import img31 from "../images/dresscode/mischief/IMG_5374.jpeg"
+import img1 from "../images/dresscode/bjork_polarbear.jpg";
+import img2 from "../images/dresscode/cult.jpeg";
+import img3 from "../images/dresscode/dancing.jpg";
+import img4 from "../images/dresscode/deer.jpeg";
+import img5 from "../images/dresscode/desert_cult.jpg";
+import img6 from "../images/dresscode/goat_wizard.jpeg";
+import img7 from "../images/dresscode/infinite_cult.jpeg";
+import img8 from "../images/dresscode/jumpsuit.jpeg";
+import img9 from "../images/dresscode/midsommar_children.jpeg";
+import img10 from "../images/dresscode/midsommar.jpeg";
+import img11 from "../images/dresscode/red_sun.jpeg";
+import img12 from "../images/dresscode/toga.jpeg";
+import img13 from "../images/dresscode/white_dresses.jpeg";
+import img14 from "../images/dresscode/whiteparty.jpeg";
+import img15 from "../images/dresscode/whiteparty2.jpeg";
+import img16 from "../images/dresscode/whiteparty3.jpeg";
 
 interface Props {
   footer: string;
@@ -40,15 +25,14 @@ interface Props {
 }
 
 const imgData = [
-    // { img: img1 },
-    // { img: img2 },
+    { img: img1 },
+    { img: img2 },
     { img: img3 },
     { img: img4 },
     { img: img5 },
     { img: img6 },
     { img: img7 },
     { img: img8 },
-    { img: img8_2 },
     { img: img9 },
     { img: img10 },
     { img: img11 },
@@ -56,24 +40,10 @@ const imgData = [
     { img: img13 },
     { img: img14 },
     { img: img15 },
-    { img: img16 },
-    { img: img17 },
-    { img: img19 },
-    { img: img20 },
-    { img: img21 },
-    { img: img22 },
-    { img: img23 },
-    { img: img24 },
-    { img: img25 },
-    { img: img26 },
-    { img: img27 },
-    { img: img28 },
-    { img: img29 },
-    { img: img30 },
-    { img: img31 }
+    { img: img16 }
 ];
 ---
 
 <MoodBoardPage footer="/" title="Dresscode" imgData={imgData}>
-    <p>[DRESS CODE DESCRIPTION PLACEHOLDER]</p>
+    <p>Recommendation: Dress as if you are meeting some friends in rural Sweden for a pagan midsummer festival, but instead of human sacrifice there will be lots of pizza and orange wine.</p>
 </MoodBoardPage>
