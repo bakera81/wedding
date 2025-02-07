@@ -5,6 +5,7 @@ interface Props {
 }
 
 import Footer from '../components/Footer.astro'
+import ExitPopup from '../components/ExitPopup.astro'
 
 const { title, footer } = Astro.props;
 ---
@@ -26,6 +27,7 @@ const { title, footer } = Astro.props;
 		{footer ? (
 			<Footer footer={footer} />
 		) : (<></>)}
+		<ExitPopup />
 	</body>
 
 <style is:global>

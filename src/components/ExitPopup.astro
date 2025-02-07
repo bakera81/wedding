@@ -1,0 +1,229 @@
+---
+// ExitPopup.astro
+---
+
+<div id="exit-popup" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-card star-div">
+    <!-- <svg class="squiggly-bg" viewBox="0 0 500 400" preserveAspectRatio="none">
+      <path d="M20,20 
+        C80,-20 120,60 180,20 
+        L480,20 
+        C420,60 380,-20 320,20 
+        L20,380 
+        C80,340 120,420 180,380 
+        L480,380 
+        C420,420 380,340 320,380 Z" 
+        fill="#3d352b"/>
+    </svg> -->
+    <div class="squiggly-content">
+      <header class="modal-head">
+        <p class="modal-card-title has-text-white has-text-centered">Don't forget!</p>
+        <button id="close-popup" class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-body">
+        <p class="has-text-white has-text-centered">RSVP by April 1 to secure your spot.</p>
+      </section>
+      <footer class="modal-foot">
+        <button id="download" class="button is-primary is-centered">RSVP</button>
+        <button id="download" class="button is-primary is-centered">Download our whitepaper</button>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<style>
+  .modal-background {
+    background-color: rgba(0, 0, 0, 0.5) !important; 
+  }
+
+  .squiggly-shape {
+    background: transparent !important;
+    border: none !important;
+    position: relative;
+    width: 500px;
+    max-width: 90vw;
+  }
+
+  .wiggly-div {
+    width: 300px;
+    height: 200px;
+    background: transparent;
+    border: 2px solid black;
+    clip-path: path("M10,10 Q40,30 70,10 T130,10 T190,10 T250,10 T310,10 L310,190 Q280,170 250,190 T190,190 T130,190 T70,190 T10,190 Z");
+  }
+
+  @keyframes wiggle {
+  0% { 
+    clip-path: polygon(
+      50% 5%, 63% 30%, 95% 30%, 
+      70% 50%, 80% 80%, 50% 65%, 
+      20% 80%, 30% 50%, 5% 30%, 
+      37% 30%
+    );
+  }
+  50% { 
+    clip-path: polygon(
+      50% 8%, 60% 32%, 93% 33%, 
+      68% 52%, 78% 78%, 50% 68%, 
+      22% 78%, 32% 52%, 7% 33%, 
+      40% 32%
+    );
+  }
+  100% { 
+    clip-path: polygon(
+      50% 5%, 63% 30%, 95% 30%, 
+      70% 50%, 80% 80%, 50% 65%, 
+      20% 80%, 30% 50%, 5% 30%, 
+      37% 30%
+    );
+  }
+}
+
+.star-div {
+  width: 800px;
+  height: 800px;
+  background: transparent;
+  border: 6px solid black;
+  clip-path: polygon(
+    50% 5%, 63% 30%, 95% 30%, 
+    70% 50%, 80% 80%, 50% 65%, 
+    20% 80%, 30% 50%, 5% 30%, 
+    37% 30%
+  );
+  animation: wiggle 2s infinite alternate ease-in-out;
+}
+
+  .squiggly-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+  }
+
+  .squiggly-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    width: 800px;
+    height: 800px;
+  }
+
+  .inner-squiggly-content {
+    background-color: #3d352b;
+  }
+
+  .squiggly-shape .modal-card-head,
+  .squiggly-shape .modal-card-foot {
+    background: transparent !important;
+    border: none !important;
+  }
+
+  .modal-head, .modal-body, .modal-foot {
+    background-color: #3d352b;
+  }
+
+  .modal-head {
+    padding-top: 200px;
+  }
+
+  .modal-body {
+    height: 100px;
+  }
+
+  .modal-foot {
+    padding-bottom: 200px;
+    width: 800px;
+    background-color: #3d352b;
+  }
+
+  .modal-card {
+    overflow: visible !important;
+  }
+
+  .delete {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+
+  /* Style adjustments for dark background */
+  .modal-card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .button.is-ghost:hover {
+    text-decoration: underline;
+  }
+
+  #download {
+    background-color: white;
+    display: block;
+    width: fit-content; /* Ensures it only takes up as much space as needed */
+    margin: 0 auto; /* Centers horizontally */
+  }
+</style>
+
+<script client:load>
+  document.addEventListener('DOMContentLoaded', () => {
+    let hasShown = false;
+
+    function showPopup() {
+      const popup = document.getElementById('exit-popup');
+      console.log('Attempting to show popup');
+      console.log('Current popup state:', popup?.classList.toString());
+      
+      if (!hasShown && !sessionStorage.getItem('exitPopupShown')) {
+        if (popup) {
+          popup.classList.add('is-active');
+          console.log('Added is-active class');
+          console.log('New popup state:', popup.classList.toString());
+          hasShown = true;
+          sessionStorage.setItem('exitPopupShown', 'true');
+        } else {
+          console.error('Popup element not found');
+        }
+      } else {
+        console.log('Popup already shown or in session storage');
+      }
+    }
+
+    function closePopup() {
+      const popup = document.getElementById('exit-popup');
+      if (popup) {
+        popup.classList.remove('is-active');
+        console.log('Popup closed');
+      }
+    }
+
+    // Test function - you can call this from browser console
+    window.testPopup = showPopup;
+
+    document.body.addEventListener('mouseleave', (e) => {
+      console.log('Mouse left document');
+      if (e.clientY <= 0) {
+        showPopup();
+      }
+    });
+
+    // Close popup handlers
+    document.getElementById('close-popup')?.addEventListener('click', closePopup);
+    document.getElementById('subscribe')?.addEventListener('click', closePopup);
+    document.getElementById('no-thanks')?.addEventListener('click', closePopup);
+
+    // Close on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closePopup();
+      }
+    });
+
+    // Close on background click
+    document.querySelector('.modal-background')?.addEventListener('click', closePopup);
+});
+</script>
+
