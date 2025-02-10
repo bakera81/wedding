@@ -76,18 +76,16 @@ const { footer } = Astro.props;
 // This component is only meant to be used inside of a MoodBoardPage component
 ---
 
-<div class="section">
+{/* <div class="section">
     <div class="container">
         <h1 id="mischief-dress-code" class="is-3 title has-text-centered">Mischief Night Dress Code</h1>
     </div>
 </div>
+ */}
 <div class="section">
     <div class="container">
         <p>This is not a dress code, it's a state of mind. An inspiration. Jimi Hendrix' Star Spangled Banner. Pagan rituals. Janis Joplin. Pointy hats. All Hallows Eve-Eve. Crystal ball. Disco witch.</p>
         <p>Bell bottoms. Sparkles. Scarves. It's Halloween.</p>
-        {footer === '/mischief' ? (<></>) : (
-            <p><a href="#wedding-dress-code"> Jump to wedding day dress code</a></p>
-        )}
     </div>
 </div>
 <MoodBoard imgData={imgData} />

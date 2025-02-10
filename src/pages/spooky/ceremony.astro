@@ -1,0 +1,28 @@
+---
+import Layout from "../../layouts/spooky/Layout.astro";
+import Image from "astro/components/Image.astro";
+
+import ceremonyImg from '../../images/spooky/wedding/witch_ritual.jpg'
+---
+
+<Layout footer="/spooky/" title="Ceremony">
+    <div class="section">
+        <div class="container">
+            <h1 class="is-0 title has-text-centered">Ceremony</h1>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container">
+            <p>Join us on the balcony (Room 515) at 9 Orchard at 4:30 on Halloween.</p>
+            <p>Please be prepared to share a memory about either (or both) of us that helps explain why you're excited about our soon-to-be-legal union. It could be an old story about Wren or Anthony as a child that not everyone knows, or as recent as something we said or did earlier that day.</p>
+            <p>Caroline will be our legal officiant, but we plan on each parent contributing to the ceremony. We will contact you directly to share more info.</p>
+            <p><a href="/spooky/dresscode#wedding-dress-code">Dress code</a></p>
+            <p><a href="/spooky/playlist">Playlist</a></p>
+        </div>
+    </div>
+    <div class="section">
+        <div class="container center-items">
+            <Image alt="Nine Orchard Street" src={ceremonyImg} style=""/>
+        </div>
+    </div>
+</Layout>

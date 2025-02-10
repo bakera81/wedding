@@ -1,5 +1,49 @@
 ---
 import MoodBoardPage from '../layouts/MoodBoardPage.astro'
+
+import img1 from "../images/dresscode/bjork_polarbear.jpg";
+import img2 from "../images/dresscode/cult.jpeg";
+import img3 from "../images/dresscode/dancing.jpg";
+import img4 from "../images/dresscode/deer.jpeg";
+import img5 from "../images/dresscode/desert_cult.jpg";
+import img6 from "../images/dresscode/goat_wizard.jpeg";
+import img7 from "../images/dresscode/infinite_cult.jpeg";
+import img8 from "../images/dresscode/jumpsuit.jpeg";
+import img9 from "../images/dresscode/midsommar_children.jpeg";
+import img10 from "../images/dresscode/midsommar.jpeg";
+import img11 from "../images/dresscode/red_sun.jpeg";
+import img12 from "../images/dresscode/toga.jpeg";
+import img13 from "../images/dresscode/white_dresses.jpeg";
+import img14 from "../images/dresscode/whiteparty.jpeg";
+import img15 from "../images/dresscode/whiteparty2.jpeg";
+import img16 from "../images/dresscode/whiteparty3.jpeg";
+
+interface Props {
+  footer: string;
+  title: string;
+  imgData: Array;
+}
+
+const imgData = [
+    { img: img1 },
+    { img: img2 },
+    { img: img3 },
+    { img: img4 },
+    { img: img5 },
+    { img: img6 },
+    { img: img7 },
+    { img: img8 },
+    { img: img9 },
+    { img: img10 },
+    { img: img11 },
+    { img: img12 },
+    { img: img13 },
+    { img: img14 },
+    { img: img15 },
+    { img: img16 }
+];
 ---
 
-<MoodBoardPage footer="/" />
+<MoodBoardPage footer="/" title="Dresscode" imgData={imgData}>
+    <p>Recommendation: Dress as if you are meeting friends in rural Sweden for a pagan midsummer festival, but instead of human sacrifice there will be lots of pizza and orange wine. White and light colors preferred.</p>
+</MoodBoardPage>

@@ -1,0 +1,101 @@
+---
+import BackgroundImg from "../../components/spooky/BackgroundImg.astro";
+
+const { imgData, scrollable } = Astro.props;
+---
+
+<div class="columns isReverseMobile no-bottom-pad">
+    <div class={`column is-two-thirds no-bottom-pad ${scrollable ? 'scrollable' : ''}`}>
+      <div class="grid is-col-min-12 is-gap-0">
+        {imgData.map(cell => (
+          <div class="cell weddingCell">
+            <BackgroundImg href={cell?.href} img={cell.img}>
+              {cell.href ? (
+                <a href={cell.href} class="weddingLink">{cell?.name}</a>
+              ) : (
+                <></>
+              )}
+            </BackgroundImg>    
+          </div>  
+        ))}
+      </div>
+    </div>
+    <div class="column">
+      <div
+        class="section"
+        style={{ paddingLeft: 0, paddingRight: 0, paddingBottom: 0 }}
+      >
+        <div class="container">
+          <h1 class="title index-title weddingTitle">
+            Wren
+          </h1>
+          <h1 class="title is-2 weddingTitle">
+            +
+          </h1>
+          <h1 class="title index-title weddingTitle">
+            Anthony
+          </h1>
+        </div>
+      </div>
+      <div class="section">
+        <div class="container">
+		      <p class="big-bird" 
+            style={{
+              textAlign: "center",
+              fontStyle: "italic",
+            }}
+          >On Halloween</p>
+          <p class="big-bird" style={{ textAlign: "center"}}>
+            Thursday, October 31, 2024
+          </p>
+          <p class="big-bird" style={{ textAlign: "center" }}>
+            9 Orchard Street, New York, New York
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+    .big-bird {
+      font-family: "Big Bird", serif;
+    }
+    .weddingCell {
+      min-height: 350px;
+      max-height: 350px;
+    }
+    .weddingTitle {
+      font-family: "Big Bird", serif;
+      text-align: center;
+      font-weight: normal;
+      /* padding-bottom: .1rem; */
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .isReverseMobile {
+        display: flex;
+        flex-direction: column-reverse;
+      }
+    }
+    .weddingLink {
+      font-family: "Big Bird", sans-serif;
+      font-size: 2.5rem;
+      /* font-style: italic; */
+      font-weight: 500;
+      color: white;
+    }
+	.no-bottom-pad {
+		padding-bottom: 0px;
+	}
+	p {
+		padding-bottom: 1rem;
+    max-width: 100%;
+	}
+  @media (min-width: 769px) {
+    .scrollable {
+      overflow: scroll;
+      max-height: 100vh;
+    }
+
+  }
+  </style>

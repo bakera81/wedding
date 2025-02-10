@@ -1,0 +1,105 @@
+---
+interface Props {
+	title: string;
+	footer: string | null;
+}
+
+import Footer from '../../components/spooky/Footer.astro'
+
+const { title, footer } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en" data-theme="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="robots" content="noindex">
+		<meta name="description" content="Wren Sieber & Anthony Baker Wedding" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" type="image/svg+xml" href="/favicon_wren.png" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+		{footer ? (
+			<Footer footer={footer} />
+		) : (<></>)}
+	</body>
+
+<style is:global>
+	@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+	@font-face {
+		font-family: 'Big Bird';
+		src: url('/fonts/big_bird/TAYBigBird.otf');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	html {
+		font-family: 'Big Bird', system-ui, sans-serif;
+		background: #13151a;
+	}
+	.title {
+		font-family: 'Big Bird', sans-serif;
+		font-weight: 500;
+	}
+	.index-title {
+		font-size: 5rem;
+	}
+	@media screen and (max-width: 1024px) and (min-width: 769px) {
+		.index-title {
+			font-size: 3.5rem;
+		}
+	}
+	.is-0 {
+		font-size: 5rem;
+	}
+	@media screen and (max-width: 1024px) { 
+		.is-0 {
+			font-size: 3.5rem;
+		}
+	}
+
+
+	p, li {
+		font-family: 'Baskerville', 'Libre Baskerville', serif;
+		font-size: 1.2rem;
+		max-width: 70%;
+	}
+	
+	@media (max-width: 768px) {
+		p, li {
+			max-width: inherit; /* Or any other value for larger screens */
+		}
+	}
+
+	p, ul, ol {
+		padding-bottom: 1em;
+	}
+
+	li {
+		padding-left: 1em;
+		padding-bottom: .7em;
+	}
+	h1, h2, h3 {
+		font-weight: 500;
+	}
+	.center-items {
+		display: flex;
+		justify-content: center;
+	}
+	.no-side-pad {
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	.no-pad {
+		padding: 0;
+	}
+</style>
+</html>

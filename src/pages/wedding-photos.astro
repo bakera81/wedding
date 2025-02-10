@@ -1,0 +1,67 @@
+---
+import MoodBoardPage from '../layouts/MoodBoardPage.astro'
+
+import img1 from "../images/wedding/DSCF0352.jpg";
+import img2 from "../images/wedding/DSCF02601.jpg";
+import img3 from "../images/wedding/DSCF02605.jpg";
+import img4 from "../images/wedding/DSCF02626.jpg";
+import img5 from "../images/wedding/DSCF02641.jpg";
+import img6 from "../images/wedding/DSCF2890.jpg";
+import img7 from "../images/wedding/DSCF2891.jpg";
+import img8 from "../images/wedding/DSCF2969.jpg";
+import img9 from "../images/wedding/DSCF3023.jpg";
+import img10 from "../images/wedding/DSCF3052.jpg";
+import img11 from "../images/wedding/DSCF3097.jpg";
+import img12 from "../images/wedding/DSCF06917.jpg";
+import img13 from "../images/wedding/DSCF06965.jpg";
+import img14 from "../images/wedding/DSCF06981.jpg";
+import img15 from "../images/wedding/DSCF9444.jpg";
+import img16 from "../images/wedding/DSCF9473.jpg";
+import img17 from "../images/wedding/DSCF9533.jpg";
+import img18 from "../images/wedding/DSCF9612.jpg";
+import img19 from "../images/wedding/DSCF09809.jpg";
+import img20 from "../images/wedding/DSCF09932.jpg";
+import img21 from "../images/wedding/DSCF09936.jpg";
+import img22 from "../images/wedding/DSCF09940.jpg";
+import img23 from "../images/wedding/DSCF94481.jpg";
+import img24 from "../images/wedding/DSCF95941.jpg";
+import img25 from "../images/wedding/IMG_2313.jpg";
+
+interface Props {
+  footer: string;
+  title: string;
+  imgData: Array;
+}
+
+const imgData = [
+    { img: img13 },
+    { img: img12 },
+    { img: img14 },
+    { img: img15 },
+    { img: img16 },
+    { img: img17 },
+    { img: img18 },
+    { img: img19 },
+    { img: img20 },
+    { img: img21 },
+    { img: img22 },
+    { img: img23 },
+    { img: img24 },
+    { img: img25 },
+    { img: img1 },
+    { img: img2 },
+    { img: img3 },
+    { img: img4 },
+    { img: img5 },
+    { img: img6 },
+    { img: img7 },
+    { img: img8 },
+    { img: img9 },
+    { img: img10 },
+    { img: img11 }
+];
+---
+
+<MoodBoardPage footer="/" title="Halloween, 2024" imgData={imgData}>
+    {/*  <p>[WEDDING DESCRIPTION PLACEHOLDER]</p> */}
+</MoodBoardPage>

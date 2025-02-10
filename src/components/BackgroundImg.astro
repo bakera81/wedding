@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 
-const { height, img, href } = Astro.props;
+const { height, img, href, newTab } = Astro.props;
 
 let imgHeight = height ? height : 450; 
 ---
@@ -10,21 +10,17 @@ let imgHeight = height ? height : 450;
   <div class='bgImgOverlay'>
     <slot></slot>
   </div>
-  {href ? (
-    <a href={href} class="bgImgContainer">
+  <a 
+    href={href ? href : undefined} 
+    target={newTab ? "_blank" : undefined} 
+    rel={newTab ? "noopener noreferrer" : undefined} 
+    class="bgImgContainer"
+  >
     <Image 
-      alt="Scenes from a spooky wedding"
+      alt="Solstice wedding party vibes"
       src={img}
-      // height={imgHeight}
-      />
-    </a>
-  ) : (
-    <Image 
-      src={img}
-      alt="Scenes from a spooky wedding"
-      // height={imgHeight}
-      />
-  )}
+    />
+  </a>
 </div>
 <style>
   .bgImgContainer {

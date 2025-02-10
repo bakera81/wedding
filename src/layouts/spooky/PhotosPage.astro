@@ -1,0 +1,171 @@
+---
+import Layout from "../../layouts/spooky/Layout.astro"
+import IndexLayout from "../../layouts/spooky/IndexLayout.astro"
+
+const { footer } = Astro.props;
+
+import img1 from "../../images/spooky/photos/65966712782__C961C4CE-7E45-4375-A2A0-6A83D0C61280.jpg";
+import img2 from "../../images/spooky/photos/IMG_3383.jpg";
+import img3 from "../../images/spooky/photos/69643869176__AA81DD2F-B62C-4321-919C-4DFF2767A73E.fullsizerender 2.jpg";
+import img4 from "../../images/spooky/photos/IMG_3467.jpg";
+import img5 from "../../images/spooky/photos/Haley and Jarrod-763.jpg";
+import img6 from "../../images/spooky/photos/IMG_3473.jpg";
+import img7 from "../../images/spooky/photos/IMG_0024.jpg";
+import img8 from "../../images/spooky/photos/IMG_3492.jpg";
+import img9 from "../../images/spooky/photos/IMG_0029.jpg";
+import img10 from "../../images/spooky/photos/IMG_3644.jpg";
+import img11 from "../../images/spooky/photos/IMG_0047.jpg";
+import img12 from "../../images/spooky/photos/IMG_3652.jpg";
+import img13 from "../../images/spooky/photos/IMG_0145.jpg";
+import img14 from "../../images/spooky/photos/IMG_3696_2.jpg";
+import img15 from "../../images/spooky/photos/IMG_0165.jpg";
+import img16 from "../../images/spooky/photos/IMG_3842.jpg";
+import img17 from "../../images/spooky/photos/IMG_0261.jpg";
+import img18 from "../../images/spooky/photos/IMG_3991.jpg";
+import img19 from "../../images/spooky/photos/IMG_0531.jpg";
+import img20 from "../../images/spooky/photos/IMG_4011.jpg";
+import img21 from "../../images/spooky/photos/IMG_1043.jpg";
+import img22 from "../../images/spooky/photos/IMG_4037.jpg";
+import img23 from "../../images/spooky/photos/IMG_1107.jpg";
+import img24 from "../../images/spooky/photos/IMG_4044.jpg";
+import img25 from "../../images/spooky/photos/IMG_1324.jpg";
+import img26 from "../../images/spooky/photos/IMG_4346.jpg";
+import img27 from "../../images/spooky/photos/IMG_1511.jpg";
+import img28 from "../../images/spooky/photos/IMG_4383.jpg";
+import img29 from "../../images/spooky/photos/IMG_1539.jpg";
+import img30 from "../../images/spooky/photos/IMG_4418_2.jpg";
+import img31 from "../../images/spooky/photos/IMG_2099.jpg";
+import img32 from "../../images/spooky/photos/IMG_4492.jpg";
+import img33 from "../../images/spooky/photos/IMG_2115.jpg";
+import img34 from "../../images/spooky/photos/IMG_4496.jpg";
+import img35 from "../../images/spooky/photos/IMG_2133.jpg";
+import img36 from "../../images/spooky/photos/IMG_4519_2.jpg";
+import img37 from "../../images/spooky/photos/IMG_2192.jpg";
+import img38 from "../../images/spooky/photos/IMG_4520.jpg";
+import img39 from "../../images/spooky/photos/IMG_2210.jpg";
+import img40 from "../../images/spooky/photos/IMG_4536.jpg";
+import img41 from "../../images/spooky/photos/IMG_2344.jpg";
+import img42 from "../../images/spooky/photos/IMG_4637.jpg";
+import img43 from "../../images/spooky/photos/IMG_2351.jpg";
+import img44 from "../../images/spooky/photos/IMG_4821.jpg";
+import img45 from "../../images/spooky/photos/IMG_2384.jpg";
+import img46 from "../../images/spooky/photos/IMG_5030.jpg";
+import img47 from "../../images/spooky/photos/IMG_2452.jpg";
+import img48 from "../../images/spooky/photos/IMG_5137.jpg";
+import img49 from "../../images/spooky/photos/IMG_2793.jpg";
+import img50 from "../../images/spooky/photos/IMG_5202.jpg";
+import img51 from "../../images/spooky/photos/IMG_2874.jpg";
+import img52 from "../../images/spooky/photos/IMG_5278.jpg";
+import img53 from "../../images/spooky/photos/IMG_2924.jpg";
+import img54 from "../../images/spooky/photos/IMG_5302.jpg";
+import img55 from "../../images/spooky/photos/IMG_2955.jpg";
+import img56 from "../../images/spooky/photos/IMG_5324.jpg";
+import img57 from "../../images/spooky/photos/IMG_2967.jpg";
+import img58 from "../../images/spooky/photos/IMG_5347.jpg";
+// import img59 from "../../images/spooky/photos/IMG_2973.jpg";
+import img60 from "../../images/spooky/photos/IMG_5415.jpg";
+import img61 from "../../images/spooky/photos/IMG_3124.jpg";
+import img62 from "../../images/spooky/photos/IMG_5419.jpg";
+import img63 from "../../images/spooky/photos/IMG_3139.jpg";
+import img64 from "../../images/spooky/photos/IMG_5501.jpg";
+import img65 from "../../images/spooky/photos/IMG_3172.jpg";
+import img66 from "../../images/spooky/photos/IMG_5572.jpg";
+import img67 from "../../images/spooky/photos/IMG_3209.jpg";
+import img68 from "../../images/spooky/photos/IMG_5874.jpg";
+import img69 from "../../images/spooky/photos/IMG_3270.jpg";
+import img70 from "../../images/spooky/photos/IMG_6135_2.jpg";
+import img71 from "../../images/spooky/photos/IMG_3290.jpg";
+import img72 from "../../images/spooky/photos/IMG_6163.jpg";
+import img73 from "../../images/spooky/photos/IMG_3336.jpg";
+import img74 from "../../images/spooky/photos/IMG_6793.jpg";
+import img75 from "../../images/spooky/photos/IMG_3338.jpg";
+import img77 from "../../images/spooky/photos/IMG_3349.jpg";
+import img78 from "../../images/spooky/photos/IMG_9960.jpg";
+import img79 from "../../images/spooky/photos/IMG_3380_2.jpg";
+import img80 from "../../images/spooky/photos/IMG_4512.jpg"
+import img81 from "../../images/spooky/photos/IMG_4818.jpg"
+import img80_2 from "../../images/spooky/photos/70095502680__CE6A0174-6549-4034-9E86-EAF8C52B500F.jpg";
+import img81_2 from "../../images/spooky/photos/CD22FC94-5AA2-444C-9754-A8045F2E7E0F.jpg";
+import img82 from "../../images/spooky/photos/IMG_0156.jpg";
+import img83 from "../../images/spooky/photos/IMG_0173_Original.jpg";
+import img84 from "../../images/spooky/photos/IMG_0600.jpg";
+import img85 from "../../images/spooky/photos/IMG_1469.jpg";
+import img86 from "../../images/spooky/photos/IMG_1792.jpg";
+import img87 from "../../images/spooky/photos/IMG_1819.jpg";
+import img88 from "../../images/spooky/photos/IMG_2151.jpg";
+import img89 from "../../images/spooky/photos/IMG_2228.jpg";
+import img90 from "../../images/spooky/photos/IMG_2600.jpg";
+import img91 from "../../images/spooky/photos/IMG_2762.jpg";
+import img92 from "../../images/spooky/photos/IMG_3322.jpg";
+import img93 from "../../images/spooky/photos/IMG_3754.jpg";
+import img94 from "../../images/spooky/photos/IMG_3757.png";
+import img95 from "../../images/spooky/photos/IMG_3980.jpg";
+import img96 from "../../images/spooky/photos/IMG_4637.jpg";
+import img97 from "../../images/spooky/photos/IMG_5465.jpg";
+import img98 from "../../images/spooky/photos/IMG_5664.jpg";
+import img99 from "../../images/spooky/photos/IMG_5785.jpg";
+import img100 from "../../images/spooky/photos/IMG_6069.jpg";
+import img101 from "../../images/spooky/photos/IMG_6089.png";
+import img102 from "../../images/spooky/photos/IMG_6327.jpg";
+import img103 from "../../images/spooky/photos/IMG_7010.jpg";
+import img104 from "../../images/spooky/photos/IMG_7743.jpg";
+import img105 from "../../images/spooky/photos/IMG_7939.jpg";
+import img106 from "../../images/spooky/photos/IMG_8235.png";
+import img107 from "../../images/spooky/photos/IMG_8304.png";
+import img108 from "../../images/spooky/photos/IMG_8783.jpg";
+// import img109 from "../../images/spooky/photos/IMG_9961.jpg";
+import img110 from "../../images/spooky/photos/IMG_1074.jpg";
+import img111 from "../../images/spooky/photos/IMG_5288.jpg";
+
+const photosData = [
+    { img: img2 }, { img: img3 }, { img: img4 }, { img: img5 }, { img: img6 }, { img: img7 }, { img: img8 }, { img: img9 }, { img: img1 }, 
+    { img: img10 }, { img: img11 }, { img: img12 }, { img: img13 }, { img: img14 }, { img: img15 }, { img: img16 }, { img: img17 }, 
+    { img: img18 }, { img: img19 }, { img: img20 }, { img: img21 }, { img: img22 }, { img: img23 }, { img: img24 }, { img: img25 }, 
+    { img: img26 }, { img: img27 }, { img: img28 }, { img: img29 }, { img: img30 }, { img: img31 }, { img: img32 }, { img: img33 }, 
+    { img: img34 }, { img: img35 }, { img: img36 }, { img: img37 }, { img: img38 }, { img: img39 }, { img: img40 }, { img: img41 }, 
+    { img: img42 }, { img: img43 }, { img: img44 }, { img: img45 }, { img: img46 }, { img: img47 }, { img: img48 }, { img: img49 }, 
+    { img: img50 }, { img: img51 }, { img: img52 }, { img: img53 }, { img: img54 }, { img: img55 }, { img: img56 }, { img: img57 }, 
+    { img: img58 }, { img: img80 }, { img: img81 },
+    // { img: img59 }, 
+    { img: img60 }, { img: img61 }, { img: img62 }, { img: img63 }, { img: img64 }, { img: img65 }, 
+    { img: img66 }, { img: img67 }, { img: img68 }, { img: img69 }, { img: img70 }, { img: img71 }, { img: img72 }, { img: img73 }, 
+    { img: img74 }, { img: img75 }, { img: img77 }, { img: img78 }, 
+    { img: img80_2 },
+    { img: img81_2 },
+    { img: img82 },
+    { img: img83 },
+    { img: img84 },
+    { img: img110 },
+    { img: img85 },
+    { img: img86 },
+    { img: img87 },
+    { img: img88 },
+    { img: img89 },
+    { img: img90 },
+    { img: img91 },
+    { img: img92 },
+    { img: img93 },
+    { img: img94 },
+    { img: img95 },
+    { img: img96 },
+    { img: img97 },
+    { img: img98 },
+    { img: img99 },
+    { img: img100 },
+    { img: img101 },
+    { img: img102 },
+    { img: img103 },
+    { img: img104 },
+    { img: img105 },
+    { img: img106 },
+    { img: img111 },
+    { img: img107 },
+    { img: img108 },
+    { img: img79 }
+    // { img: img109 }
+];
+---
+
+<Layout footer={footer} title="Wren & Anthony's Spooky Wedding">
+    <IndexLayout imgData={photosData} scrollable="true"/>
+</Layout>
