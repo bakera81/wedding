@@ -22,7 +22,7 @@
         <button id="close-popup" class="delete" aria-label="close"></button>
       </header>
       <section class="modal-body">
-        <p class="has-text-white has-text-centered">RSVP by March 15 to secure your spot.</p>
+        <p class="has-text-white has-text-centered has-text-weight-bold">RSVP by March 15 to secure your spot.</p>
       </section>
       <footer class="modal-foot">
         <a 
@@ -44,7 +44,7 @@
 
 <style>
   .modal-background {
-    background-color: rgba(0, 0, 0, 0.5) !important; 
+    background-color: rgba(0, 0, 0, 0.7) !important; 
   }
 
   .squiggly-shape {
@@ -94,7 +94,7 @@
   width: 800px;
   height: 800px;
   background: transparent;
-  border: 6px solid black;
+  border: 6px solid #dc4f34;
   clip-path: polygon(
     50% 5%, 63% 30%, 95% 30%, 
     70% 50%, 80% 80%, 50% 65%, 
@@ -111,7 +111,7 @@
     top: 0;
     left: 0;
     z-index: -1;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.2));
+    /* filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.7)); */
   }
 
   .squiggly-content {
@@ -123,7 +123,7 @@
   }
 
   .inner-squiggly-content {
-    background-color: #3d352b;
+    background-color: #dc4f34;
   }
 
   .squiggly-shape .modal-card-head,
@@ -133,21 +133,15 @@
   }
 
   .modal-head, .modal-body, .modal-foot {
-    background-color: #3d352b;
+    background-color: #dc4f34;
   }
 
   .modal-head {
     padding-top: 200px;
   }
 
-  .modal-body {
-    height: 100px;
-  }
-
   .modal-foot {
     padding-bottom: 200px;
-    width: 800px;
-    background-color: #3d352b;
   }
 
   .modal-card {
@@ -162,7 +156,7 @@
 
   /* Style adjustments for dark background */
   .modal-card-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
   }
 
