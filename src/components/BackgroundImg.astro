@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 
 const { height, img, href, newTab } = Astro.props;
 
-let imgHeight = height ? height : 450; 
+let imgHeight = height ? height : 350; 
 ---
  
 <div class='bgImgContainer'>
@@ -19,6 +19,9 @@ let imgHeight = height ? height : 450;
     <Image 
       alt="Solstice wedding party vibes"
       src={img}
+      width={800} 
+      height={imgHeight}
+      quality={80}
     />
   </a>
 </div>

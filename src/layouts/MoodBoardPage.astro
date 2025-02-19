@@ -13,7 +13,7 @@ interface Props {
 const { footer, title, imgData }  = Astro.props;
 ---
 
-<Layout footer={footer} title="Dresscode">
+<Layout footer={footer} title={title}>
   <div class="section">
     <div class="container">
       <h1 class="is-0 title has-text-centered">{title}</h1>
